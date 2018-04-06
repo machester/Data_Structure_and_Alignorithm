@@ -15,14 +15,17 @@ typedef struct{
 
 //liner linked list
 struct NodeList{
-    int *p;
     students *NodeData;
     struct Node *nextNode;
-}*nodeList;
+}linkedList;
 
+//function statement define
 void SantexInput(students *pStdList);
 void DataCheck(students *pStdList);
 status _F_Quit(void);
+linkedList LinkListCreat(linkedList *list);
+linkedList LinkListInsert(linkedList *list, int number);
+
 
 
 int parts;
@@ -69,14 +72,14 @@ int main(void)
             case 7:
                 break;
             default:
-                printf("\n/---- Select error. -----/\n");
+                printf("\n---- input error. -----\n");
                 break;
         }
         if(True == breakFlag)
             break;
     }
     free(pStdList);
-    printf("\n/------------- EXTI SUCCESS ---------------/\n");
+    printf("\n------------- EXTI SUCCESS ---------------\n");
     return 0;
 }
 
@@ -92,7 +95,7 @@ void SantexInput(students *pStdList)
         scanf("%s", &((pStdList + i)->name));
         scanf("%lf", &((pStdList + i)->score));
     }
-    printf("\n/---- Input Accepted. ----/\n");
+    printf("\n---- Input Accepted. ----\n");
 }
 void DataCheck(students *pStdList)
 {
@@ -110,7 +113,7 @@ void DataCheck(students *pStdList)
 		    (pStdList + i) ->name, \
 		    (pStdList + i) ->score);
         }
-        printf("\n/----- Data check completed. ----/\n");
+        printf("\n----- Data check completed. ----\n");
     }
 }
 status _F_Quit(void)
