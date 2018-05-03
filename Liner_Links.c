@@ -14,10 +14,10 @@ typedef struct{
 }students;
 
 //liner linked list
-struct NodeList{
+struct Node{
     students *NodeData;
     struct Node *nextNode;
-}linkedList;
+}*NodeList;
 
 //function statement define
 void SantexInput(students *pStdList);
@@ -84,6 +84,16 @@ int main(void)
 }
 
 
+
+
+
+
+
+
+
+
+
+/*******************************************
 void SantexInput(students *pStdList)
 {
     int i;
@@ -120,3 +130,4 @@ status _F_Quit(void)
 {
     return True;
 }
+**************************************************************/
