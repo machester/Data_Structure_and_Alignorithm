@@ -4,5 +4,5 @@
 
 **file structure**
 
-
+Basic data struct written in C program.
 
